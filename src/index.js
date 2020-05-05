@@ -144,6 +144,28 @@ export function after_or_equal(value, arg) {
     return moment(value).isSameOrAfter(moment(arg[0], format, true));
 }
 
+/**
+ * Validates if a given value is present
+ *
+ * @example required('Foo')
+ *
+ * @param value
+ * @returns {boolean}
+ */
 export function required(value)  {
     return (value !== '' && value !== null && typeof value !== 'undefined');
+}
+
+/**
+ * Validates if a given value is valid url
+ *
+ * @example url('https://example.com')
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function url(value) {
+    return new RegExp(
+        "^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*(\\?[;&a-z\\d%_.~+=-]*)?(\\#[-a-z\\d_]*)?$"
+    ).test(String(value).toLowerCase());
 }
