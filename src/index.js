@@ -143,3 +143,7 @@ export function after_or_equal(value, arg) {
 
     return moment(value).isSameOrAfter(moment(arg[0], format, true));
 }
+
+export function required(value)  {
+    return (value !== '' && value !== null && typeof value !== 'undefined');
+}
