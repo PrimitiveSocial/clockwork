@@ -179,5 +179,8 @@ export function url(value) {
  * @returns {boolean|boolean}
  */
 export function numeric(value) {
+    if(is_array(value) || typeof value === 'object') {
+        return false;
+    }
     return !isNaN(parseFloat(value)) && isFinite(value);
 }
