@@ -169,3 +169,15 @@ export function url(value) {
         "^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$"
     ).test(String(value).toLowerCase());
 }
+
+/**
+ * Validates if a given value is numeric
+ *
+ * @example numeric(1.5)
+ *
+ * @param value
+ * @returns {boolean|boolean}
+ */
+export function numeric(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
