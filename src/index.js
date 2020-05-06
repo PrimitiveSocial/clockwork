@@ -201,3 +201,41 @@ export function integer(value) {
 
     return parseInt(value).toString() === value.toString();
 }
+
+/**
+ * Validates if a given value is greater than the minimum specified
+ *
+ * @example min(15, 10)
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
+export function min(value, arg) {
+    if(!value || is_array(value) || typeof value === 'object') {
+        return false;
+    }
+
+    value = typeof value === "string" ? value.length : value;
+
+    return parseFloat(value) >= arg;
+}
+
+/**
+ * Validates if a given value is greater than the maximum specified
+ *
+ * @example min(15, 10)
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
+export function max(value, arg) {
+    if(!value || is_array(value) || typeof value === 'object') {
+        return false;
+    }
+
+    value = typeof value === "string" ? value.length : value;
+
+    return parseFloat(value) <= arg;
+}
