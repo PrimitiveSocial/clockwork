@@ -179,8 +179,25 @@ export function url(value) {
  * @returns {boolean|boolean}
  */
 export function numeric(value) {
-    if(is_array(value) || typeof value === 'object') {
+    if(!value || is_array(value) || typeof value === 'object') {
         return false;
     }
+
     return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+/**
+ * Validates if a given value is an integer
+ *
+ * @example integer(100)
+ *
+ * @param value
+ * @returns {boolean|boolean}
+ */
+export function integer(value) {
+    if(!value || is_array(value) || typeof value === 'object') {
+        return false;
+    }
+
+    return parseInt(value).toString() === value.toString();
 }
