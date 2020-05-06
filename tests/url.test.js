@@ -14,4 +14,7 @@ test('fails with invalid url', () => {
     expect(url('google.')).toBe(false);
     expect(url('www.google')).toBe(false);
     expect(url('www.google.')).toBe(false);
+    expect(url('')).toBe(false);
+    expect(url(null)).toBe(false);
+    expect(url(undefined)).toBe(false);
 });
