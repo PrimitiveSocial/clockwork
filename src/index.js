@@ -204,8 +204,9 @@ export function integer(value) {
 
 /**
  * Validates if a given value is greater than the minimum specified
+ * Supports both numbers and strings
  *
- * @example min(15, 10)
+ * @example min(15, 10) min('foo-bar', 5)
  *
  * @param value
  * @param arg
@@ -223,8 +224,9 @@ export function min(value, arg) {
 
 /**
  * Validates if a given value is greater than the maximum specified
+ * Supports both numbers and strings
  *
- * @example min(15, 10)
+ * @example max(15, 10) max('foo-bar', 15)
  *
  * @param value
  * @param arg
@@ -236,6 +238,54 @@ export function max(value, arg) {
     }
 
     value = typeof value === "string" ? value.length : value;
-
     return parseFloat(value) <= arg;
+}
+
+/**
+ * Validates if a given value is a json object
+ *
+ * @example json({ foo: 'bar'})
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function json(value) {
+    if(!value || is_array(value)) {
+        return false;
+    }
+
+    return typeof value === "object";
+}
+
+/**
+ * Validates if a given value is exists in an array or a comma separated string
+ * Supports both array and strings
+ *
+ * @example is_in('foo', ['foo', 'bar'] is_in('foo', 'foo,bar')
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
+export function is_in(value, arg) {
+    if(!value || !arg) {
+        return false;
+    }
+
+    arg = typeof arg === "string" ? arg.split(",") : arg;
+    return arg.includes(value);
+}
+
+/**
+ * Validates if a given value does not exists in an array or a comma separated string
+ * Supports both array and strings
+ *
+ * @example not_in('foo', ['foo', 'bar'] not_in('foo', 'foo,bar')
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
+export function not_in(value, arg) {
+    return !is_in(value, arg);
 }
