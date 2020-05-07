@@ -347,3 +347,18 @@ export function alpha_numeric(value) {
 
     return new RegExp("^[a-zA-Z0-9\\s]+$").test(value);
 }
+
+/**
+ * Validates if a given value contains only letters, hyphens and underscores
+ *
+ * @example alphanumeric('_bar-foo')
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function alpha_dash(value) {
+    if(!value || typeof value === 'object')
+        return false;
+
+    return new RegExp("^[a-zA-Z-_]+$").test(value);
+}
