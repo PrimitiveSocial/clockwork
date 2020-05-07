@@ -303,3 +303,17 @@ export function not_in(value, arg) {
 export function same(value, arg) {
     return (typeof value === 'object') ? JSON.stringify(value) === JSON.stringify(arg) : value === arg;
 }
+
+/**
+ * Validates if a given value is the different than a given argument
+ * Supports numbers, strings, array and objects.
+ *
+ * @example different(1,1) different('foo', 'bar') different([1,2], [1,3])
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
+export function different(value, arg) {
+    return !same(value,arg);
+}
