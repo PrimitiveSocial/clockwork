@@ -290,6 +290,16 @@ export function not_in(value, arg) {
     return !is_in(value, arg);
 }
 
+/**
+ * Validates if a given value is the same as a given argument
+ * Supports numbers, strings, array and objects.
+ *
+ * @example same(1,1) same('foo', 'foo') same([1,2], [1,2])
+ *
+ * @param value
+ * @param arg
+ * @returns {boolean}
+ */
 export function same(value, arg) {
-    return value === arg;
+    return (typeof value === 'object') ? JSON.stringify(value) === JSON.stringify(arg) : value === arg;
 }
