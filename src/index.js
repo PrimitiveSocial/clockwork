@@ -330,7 +330,7 @@ export function alpha(value) {
     if(!value || typeof value === 'object')
         return false;
 
-    return new RegExp("^[A-Za-z]+$").test(value);
+    return new RegExp("^[A-Za-z]+$").test(String(value).toLowerCase());
 }
 
 /**
@@ -345,11 +345,11 @@ export function alpha_numeric(value) {
     if(!value || typeof value === 'object')
         return false;
 
-    return new RegExp("^[a-zA-Z0-9\\s]+$").test(value);
+    return new RegExp("^[a-zA-Z0-9\\s]+$").test(String(value).toLowerCase());
 }
 
 /**
- * Validates if a given value contains only letters, hyphens and underscores
+ * Validates if a given value contains only letters, dashes and underscores
  *
  * @example alphanumeric('_bar-foo')
  *
@@ -360,5 +360,22 @@ export function alpha_dash(value) {
     if(!value || typeof value === 'object')
         return false;
 
-    return new RegExp("^[a-zA-Z-_]+$").test(value);
+    return new RegExp("^[a-zA-Z-_]+$").test(String(value).toLowerCase());
+}
+
+/**
+ * Validates if a given value is a uuid
+ *
+ * @example uuid('9034dfa4-49d9-4e3f-9c6d-bc6a0e2233d1')
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function uuid(value) {
+    if(!value || typeof value === 'object')
+        return false;
+
+    return new RegExp(
+        "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    ).test(String(value).toLowerCase());
 }
