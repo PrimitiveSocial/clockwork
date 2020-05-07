@@ -405,3 +405,14 @@ export function starts_with(value, arg) {
 export function ends_with(value, arg) {
     return is_string(value) && is_string(arg) && value.endsWith(arg);
 }
+
+/**
+ * Validates that a given value is boolean.
+ *
+ * @example boolean(true)
+ * @param value
+ * @returns {boolean}
+ */
+export function boolean(value) {
+    return [true, false].includes(value);
+}
