@@ -317,3 +317,18 @@ export function same(value, arg) {
 export function different(value, arg) {
     return !same(value,arg);
 }
+
+/**
+ * Validates if a given value contains only letters
+ *
+ * @example alpha('foo')
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function alpha(value) {
+    if(!value || typeof value === 'object')
+        return false;
+
+    return new RegExp("^[A-Za-z]+$").test(value);
+}
