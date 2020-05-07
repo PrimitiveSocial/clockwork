@@ -341,7 +341,7 @@ export function alpha(value) {
  * @param value
  * @returns {boolean}
  */
-export function alphanumeric(value) {
+export function alpha_numeric(value) {
     if(!value || typeof value === 'object')
         return false;
 
