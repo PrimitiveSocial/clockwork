@@ -416,3 +416,16 @@ export function ends_with(value, arg) {
 export function boolean(value) {
     return [true, false].includes(value);
 }
+
+/**
+ * Validates if a value matches a given regex
+ *
+ * @example matches_regex("hello@example.com", "^\\S+@\\S+[\\.][0-9a-z]+$")
+ *
+ * @param value
+ * @param expression
+ * @returns {boolean}
+ */
+export  function matches_regex(value, expression) {
+    return new RegExp(expression).test(String(value).toLowerCase());
+}
