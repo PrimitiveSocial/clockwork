@@ -332,3 +332,18 @@ export function alpha(value) {
 
     return new RegExp("^[A-Za-z]+$").test(value);
 }
+
+/**
+ * Validates if a given value contains only letters and numbers
+ *
+ * @example alphanumeric('foo123')
+ *
+ * @param value
+ * @returns {boolean}
+ */
+export function alphanumeric(value) {
+    if(!value || typeof value === 'object')
+        return false;
+
+    return new RegExp("^[a-zA-Z0-9\\s]+$").test(value);
+}
