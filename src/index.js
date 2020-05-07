@@ -379,3 +379,29 @@ export function uuid(value) {
         "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
     ).test(String(value).toLowerCase());
 }
+
+/**
+ * Validates that a string begins with another string
+ *
+ * @example starts_with('foo', 'f')
+ *
+ * @param value
+ * @param arg
+ * @returns {*|boolean}
+ */
+export function starts_with(value, arg) {
+    return is_string(value) && is_string(arg) && value.startsWith(arg);
+}
+
+/**
+ * Validates that a string ends with another string
+ *
+ * @example ends_with('foo', 'o')
+ *
+ * @param value
+ * @param arg
+ * @returns {*|boolean}
+ */
+export function ends_with(value, arg) {
+    return is_string(value) && is_string(arg) && value.endsWith(arg);
+}
