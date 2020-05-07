@@ -289,3 +289,7 @@ export function is_in(value, arg) {
 export function not_in(value, arg) {
     return !is_in(value, arg);
 }
+
+export function same(value, arg) {
+    return value === arg;
+}
