@@ -1,4 +1,4 @@
-import {before_or_equal} from "../src";
+import before_or_equal from "../src/before_or_equal";
 import {expect} from "@jest/globals";
 
 test('passes with previous date', () => {

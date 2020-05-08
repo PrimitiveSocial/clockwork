@@ -1,4 +1,4 @@
-import {ends_with} from "../src";
+import ends_with from "../src/ends_with";
 import {expect} from "@jest/globals";
 
 test('passes with valid conditions', () => {

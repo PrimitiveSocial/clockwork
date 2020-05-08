@@ -1,4 +1,4 @@
-import {uuid} from "../src";
+import uuid from "../src/uuid";
 import {expect} from "@jest/globals";
 
 test('passes with valid condition', () => {

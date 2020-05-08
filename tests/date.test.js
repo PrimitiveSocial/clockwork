@@ -1,4 +1,4 @@
-import {date} from "../src";
+import date from "../src/date";
 import {expect} from "@jest/globals";
 
 test('passes with valid date string format', () => {

@@ -1,4 +1,4 @@
-import {required} from "../src";
+import required from "../src/required";
 import {expect} from "@jest/globals";
 
 test('fails with null value', () => {

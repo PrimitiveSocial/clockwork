@@ -1,4 +1,4 @@
-import {alpha} from "../src";
+import alpha from "../src/alpha";
 import {expect} from "@jest/globals";
 
 test('passes with valid condition', () => {

@@ -1,4 +1,4 @@
-import {json} from "../src";
+import json from "../src/json";
 import {expect} from "@jest/globals";
 
 test('passes with valid json object', () => {

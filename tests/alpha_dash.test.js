@@ -1,4 +1,4 @@
-import {alpha_dash} from "../src";
+import alpha_dash from "../src/alpha_dash";
 import {expect} from "@jest/globals";
 
 test('passes with valid condition', () => {

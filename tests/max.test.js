@@ -1,4 +1,4 @@
-import {max} from "../src";
+import max from "../src/max";
 import {expect} from "@jest/globals";
 
 test('passes with numeric values and valid conditions', () => {

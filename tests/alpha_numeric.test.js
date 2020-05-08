@@ -1,4 +1,4 @@
-import {alpha_numeric} from "../src";
+import alpha_numeric from "../src/alpha_numeric";
 import {expect} from "@jest/globals";
 
 test('passes with valid condition', () => {

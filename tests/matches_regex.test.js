@@ -1,4 +1,4 @@
-import {matches_regex} from "../src";
+import matches_regex from "../src/matches_regex";
 import {expect} from "@jest/globals";
 
 test('passes with valid dates and condition', () => {

@@ -1,4 +1,4 @@
-import {is_array} from "../src";
+import is_array from "./../src/is_array";
 import {expect} from "@jest/globals";
 
 test('passes with valid array', () => {

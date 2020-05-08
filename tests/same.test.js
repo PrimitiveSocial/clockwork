@@ -1,4 +1,4 @@
-import {same} from "../src";
+import same from "../src/same";
 import {expect} from "@jest/globals";
 
 test('passes with valid conditions', () => {

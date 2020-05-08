@@ -1,4 +1,4 @@
-import {min} from "../src";
+import min from "../src/min";
 import {expect} from "@jest/globals";
 
 test('passes with numeric values and valid conditions', () => {
