@@ -1,3 +1,6 @@
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/PrimitiveSocial/clockwork/Node.js CI">
+<a href="https://www.codefactor.io/repository/github/primitivesocial/clockwork"><img src="https://www.codefactor.io/repository/github/primitivesocial/clockwork/badge" alt="CodeFactor" /></a>
+
 # Clockwork
 Clockwork is a client-side validation utilities library. 
 It can be used natively or as part of any javascript framework, and offers __25+__ validation rules out of out the box.  
