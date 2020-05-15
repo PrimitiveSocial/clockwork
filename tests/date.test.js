@@ -16,3 +16,11 @@ test('fails with valid date string but wrong format', () => {
 test('fails with valid date format but wrong date values', () => {
     expect(date('2020/19/01:YYYY/MM/DD')).toBe(false);
 });
+
+test('fails with other types', () => {
+    expect(date(null)).toBe(false);
+    expect(date('')).toBe(false);
+    expect(date(undefined)).toBe(false);
+    expect(date([])).toBe(false);
+    expect(date({})).toBe(false);
+});

@@ -11,6 +11,9 @@ const moment = require('moment');
  * @returns {boolean}
  */
 const date = function(value) {
+	if(!value || typeof value !== 'string')
+        return false;
+
     let arg = value.split(':');
     let format = (arg.length === 2) ? arg[1] : 'YYYY-MM-DD';
 
