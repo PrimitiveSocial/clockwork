@@ -1,4 +1,4 @@
-import {email} from "../src";
+import {email} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {

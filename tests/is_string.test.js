@@ -1,4 +1,4 @@
-import {is_string} from "../src";
+import {is_string} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid string', () => {

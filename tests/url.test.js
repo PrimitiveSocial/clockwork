@@ -1,4 +1,4 @@
-import {url} from "../src";
+import {url} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid urls', () => {

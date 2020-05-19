@@ -1,4 +1,4 @@
-import {numeric} from "../src";
+import {numeric} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid numbers', () => {

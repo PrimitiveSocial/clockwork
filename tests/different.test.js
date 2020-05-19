@@ -1,4 +1,4 @@
-import {different} from "../src";
+import {different} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {

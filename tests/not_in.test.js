@@ -1,4 +1,4 @@
-import {not_in} from "../src";
+import {not_in} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with array and valid condition', () => {

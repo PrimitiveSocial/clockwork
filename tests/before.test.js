@@ -1,4 +1,4 @@
-import {before} from "../src";
+import {before} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid dates and condition', () => {

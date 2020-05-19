@@ -1,4 +1,4 @@
-import {boolean} from "../src";
+import {boolean} from "../src/rules";
 import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
