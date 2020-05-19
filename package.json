@@ -21,10 +21,10 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@jest/globals": "^25.5.2",
-    "jest": "^25.5.4"
+    "@jest/globals": "^26.0.1",
+    "jest": "^26.0.1"
   },
   "dependencies": {
-    "moment": "^2.25.2"
+    "moment": "^2.25.3"
   }
 }
