@@ -1,4 +1,5 @@
 const moment = require('moment');
+import {Validator} from "./classes/Validator";
 
 /**
  * Validates if a given date is after another date
@@ -445,6 +446,41 @@ const uuid = function(value) {
     ).test(String(value).toLowerCase());
 }
 
+const VueClockwork = {
+    install: function(Vue, options = {}) {
+        Vue.mixin({
+            data() {
+                return {
+                    validator: null
+                }
+            },
+            methods: {
+                initValidator() {
+                    let sfc = this;
+                    this.validator = new Validator();
+                    this.validator.setComponentInstance(sfc);
+                },
+                hasError(dataKey) {
+                    if(!this.validator.errorsBag)
+                        return false
+
+                    let errors =  this.validator.errorsBag.filter(error => error.dataKey === dataKey);
+                    return !!(errors.length);
+                },
+                showError(dataKey) {
+                    if(!this.validator.errorsBag) {
+                        window.console.log('no errors to display');
+                        return null;
+                    }
+
+                    let errors = this.validator.errorsBag.filter(error => error.dataKey === dataKey);
+                    return (errors.length) ? errors[0].message : null;
+                }
+            }
+        });
+    }
+}
+
 module.exports = {
     after,
     after_or_equal,
@@ -473,5 +509,6 @@ module.exports = {
     same,
     starts_with,
     url,
-    uuid
+    uuid,
+    VueClockwork
 }
