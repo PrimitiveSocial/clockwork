@@ -1,5 +1,6 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/PrimitiveSocial/clockwork/NodeCI)
 [![CodeFactor](https://www.codefactor.io/repository/github/primitivesocial/clockwork/badge)](https://www.codefactor.io/repository/github/primitivesocial/clockwork)
+![NPM](https://img.shields.io/npm/l/@primitivesocial/clockwork)
 
 # Clockwork
 Clockwork is a client-side validation utilities library. 
