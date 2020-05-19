@@ -1,4 +1,4 @@
-import * as definedRules from "./../index";
+import * as definedRules from "./../rules";
 import {find} from "../utils/Eloquent";
 import {hasArg} from "../utils/Helper";
 
