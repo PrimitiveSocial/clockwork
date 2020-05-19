@@ -14,15 +14,17 @@ npm i @primitivesocial/clockwork --save
 
 ## Usage
 ```js
-import {is_string, min} from "primitivesocial/clockwork";
+import {_v} from "primitivesocial/clockwork";
 
 let name = 'primitive';
 
-if(is_string(name) && min(name, 3))
+if(_v.is_string(name) && _v.min(name, 3))
     window.alert('name is valid');
 ```
 
 ## Available Rules
+> :warning: All date values must be of format YYYY-MM-DD (example: '2020-01-15')
+
 - **`after`** Validates if a given value (date string) is after another value (date string)
 ```js
 let d = '2020-5-1';
