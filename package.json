@@ -1,6 +1,6 @@
 {
   "name": "@primitivesocial/clockwork",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javascript validation utilities",
   "main": "dist/index.js",
   "scripts": {
