@@ -1,5 +1,5 @@
-import same from "../src/same";
-import {expect} from "@jest/globals";
+import {same} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(same('foo', 'foo')).toBe(true);

@@ -1,5 +1,5 @@
-import matches_regex from "../src/matches_regex";
-import {expect} from "@jest/globals";
+import {matches_regex} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid dates and condition', () => {
     expect(matches_regex('foobar', '^[A-Za-z]+$')).toBe(true);

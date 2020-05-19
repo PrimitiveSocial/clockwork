@@ -1,5 +1,5 @@
-import date from "../src/date";
-import {expect} from "@jest/globals";
+import {date} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid date string format', () => {
     expect(date('2020-01-10')).toBe(true);

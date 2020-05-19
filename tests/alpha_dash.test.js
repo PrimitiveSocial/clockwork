@@ -1,5 +1,5 @@
-import alpha_dash from "../src/alpha_dash";
-import {expect} from "@jest/globals";
+import {alpha_dash} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid condition', () => {
     expect(alpha_dash('foo')).toBe(true);

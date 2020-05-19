@@ -1,5 +1,5 @@
-import not_in from "../src/not_in";
-import {expect} from "@jest/globals";
+import {not_in} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with array and valid condition', () => {
     expect(not_in('hello', ['foo', 'bar'])).toBe(true);

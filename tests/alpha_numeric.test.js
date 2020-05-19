@@ -1,5 +1,5 @@
-import alpha_numeric from "../src/alpha_numeric";
-import {expect} from "@jest/globals";
+import {alpha_numeric} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid condition', () => {
     expect(alpha_numeric('foo')).toBe(true);

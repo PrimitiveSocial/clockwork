@@ -1,5 +1,5 @@
-import uuid from "../src/uuid";
-import {expect} from "@jest/globals";
+import {uuid} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid condition', () => {
     expect(uuid('b3da27fd-aa19-401c-8db9-6bd53b48d4b0')).toBe(true);

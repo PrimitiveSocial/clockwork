@@ -1,5 +1,5 @@
-import email from "../src/email";
-import {expect} from "@jest/globals";
+import {email} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(email('foo@bar.com')).toBe(true);

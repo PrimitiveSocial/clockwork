@@ -1,5 +1,5 @@
-import different from "../src/different";
-import {expect} from "@jest/globals";
+import {different} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(different('foo', 'bar')).toBe(true);

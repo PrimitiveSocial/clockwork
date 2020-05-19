@@ -1,5 +1,5 @@
-import json from "../src/json";
-import {expect} from "@jest/globals";
+import {json} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid json object', () => {
     expect(json({})).toBe(true);

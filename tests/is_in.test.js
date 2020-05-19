@@ -1,5 +1,5 @@
-import is_in from "../src/is_in";
-import {expect} from "@jest/globals";
+import {is_in} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with array and valid condition', () => {
     expect(is_in('foo', ['foo', 'bar'])).toBe(true);

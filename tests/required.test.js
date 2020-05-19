@@ -1,5 +1,5 @@
-import required from "../src/required";
-import {expect} from "@jest/globals";
+import {required} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('fails with null value', () => {
     expect(required(null)).toBe(false);

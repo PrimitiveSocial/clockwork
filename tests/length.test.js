@@ -1,5 +1,5 @@
-import length from "../src/length";
-import {expect} from "@jest/globals";
+import {length} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with a string and a valid condition', () => {
     expect(length('clockwork', 9)).toBe(true);

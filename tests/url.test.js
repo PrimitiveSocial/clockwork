@@ -1,5 +1,5 @@
-import url from "../src/url";
-import {expect} from "@jest/globals";
+import {url} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid urls', () => {
     expect(url('https://www.google.com')).toBe(true);

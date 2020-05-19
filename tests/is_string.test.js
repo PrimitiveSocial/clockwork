@@ -1,5 +1,5 @@
-import is_string from "../src/is_string";
-import {expect} from "@jest/globals";
+import {is_string} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid string', () => {
     expect(is_string('clockwork')).toBe(true);

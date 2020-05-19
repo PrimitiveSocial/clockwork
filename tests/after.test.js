@@ -1,5 +1,5 @@
-import after from "../src/after";
-import {expect} from "@jest/globals";
+import {after} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid dates and condition', () => {
     expect(after('2021-01-10', '2020-01-10')).toBe(true);

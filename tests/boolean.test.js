@@ -1,5 +1,5 @@
-import boolean from "../src/boolean";
-import {expect} from "@jest/globals";
+import {boolean} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(boolean(false)).toBe(true);

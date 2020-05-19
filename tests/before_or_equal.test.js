@@ -1,5 +1,5 @@
-import before_or_equal from "../src/before_or_equal";
-import {expect} from "@jest/globals";
+import {before_or_equal} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with previous date', () => {
     expect(before_or_equal('2020-01-10', '2021-01-10')).toBe(true);

@@ -1,5 +1,5 @@
-import ends_with from "../src/ends_with";
-import {expect} from "@jest/globals";
+import {ends_with} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(ends_with('foo', 'o')).toBe(true);

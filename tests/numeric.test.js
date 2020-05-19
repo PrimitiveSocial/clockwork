@@ -1,5 +1,5 @@
-import numeric from "../src/numeric";
-import {expect} from "@jest/globals";
+import {numeric} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid numbers', () => {
     expect(numeric(1)).toBe(true);

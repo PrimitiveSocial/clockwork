@@ -1,5 +1,5 @@
-import starts_with from "../src/starts_with";
-import {expect} from "@jest/globals";
+import {starts_with} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid conditions', () => {
     expect(starts_with('foo', 'f')).toBe(true);

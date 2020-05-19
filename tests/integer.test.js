@@ -1,5 +1,5 @@
-import integer from "../src/integer";
-import {expect} from "@jest/globals";
+import {integer} from "../src";
+import {expect, test} from "@jest/globals";
 
 test('passes with valid numbers', () => {
     expect(integer(1)).toBe(true);
