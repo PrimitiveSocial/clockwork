@@ -1,6 +1,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/PrimitiveSocial/clockwork/NodeCI)
 [![CodeFactor](https://www.codefactor.io/repository/github/primitivesocial/clockwork/badge)](https://www.codefactor.io/repository/github/primitivesocial/clockwork)
 ![min-size](https://img.shields.io/bundlephobia/min/@primitivesocial/clockwork/1.0.4)
+![downloads](https://img.shields.io/npm/dt/@primitivesocial/clockwork)
 ![NPM](https://img.shields.io/npm/l/@primitivesocial/clockwork)
 
 # Clockwork
