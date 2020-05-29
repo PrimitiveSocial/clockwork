@@ -15,7 +15,7 @@ npm i @primitivesocial/clockwork --save
 
 ## Usage
 ```js
-import {_v} from "primitivesocial/clockwork";
+import {_v} from "@primitivesocial/clockwork";
 
 let name = 'primitive';
 
@@ -178,6 +178,70 @@ url(str); // returns true
 ```js
 let str = '9034dfa4-49d9-4e3f-9c6d-bc6a0e2233d1';
 uuid(str); // returns true
+```
+## Vue Integration
+All the rules the package provides, can be used within the vue component validations option.
+
+- **Configuration**
+```js
+import {VueClockwork} from "@primitivesocial/clockwork";
+Vue.use(VueClockwork);
+```
+- **Usage**
+```js
+export default {
+    data: () => {
+        return {
+            username: null,
+            email: null,
+            registration: {
+                date: null,
+                type: null,
+            },        
+            types: [ 'student', 'individual', 'company'],
+            registration_ends: '2020-12-31'
+        }   
+    },
+    validations: {
+        'username': 'required | alpha_dash',
+        'email': 'required | email',
+        'registration.date': 'required | date | before_or_equal:registration_ends',
+        'registration.type': 'when_present | is_in:registration_ends',
+    },
+    methods: {
+        save() {
+            if(this.validator.passes()) {
+                // ...
+            }
+        }   
+    },
+    created() {
+        this.initValidator();
+    }
+}
+```
+- **Displaying errors**
+```html
+<span v-if="hasError('username')" class="text-red-900">{{ showError('username') }}</span>
+```
+- **Customizing error message**
+```js
+created() {
+    this.initValidator();
+    this.validator.setCustomErrorMessages({
+        'username.alpha_dash' : 'The username must only contain letters and dashes.',
+        'username.required' : 'The username must not be empty.',
+    })    
+}
+```
+- **Creating custom rule**
+```js
+created() {
+    this.initValidator();
+    this.validator.extend('greater_than_ten', function(value) {
+        return value > 10;
+    })    
+}
 ```
 
 ## Author & Contribution
