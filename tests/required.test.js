@@ -9,6 +9,10 @@ test('fails with empty string', () => {
     expect(required('')).toBe(false);
 });
 
+test('fails with empty array', () => {
+    expect(required([])).toBe(false);
+});
+
 test('passes with valid string', () => {
     expect(required('Jest')).toBe(true);
 });
