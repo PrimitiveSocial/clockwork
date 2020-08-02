@@ -207,7 +207,7 @@ export default {
         'username': 'required | alpha_dash',
         'email': 'required | email',
         'registration.date': 'required | date | before_or_equal:registration_ends',
-        'registration.type': 'when_present | is_in:registration_ends',
+        'registration.type': 'when_present | is_in:types',
     },
     methods: {
         save() {
