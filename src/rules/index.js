@@ -384,7 +384,10 @@ export function numeric(value) {
  * @returns {boolean}
  */
 export function required(value)  {
-    return (value !== '' && value !== null && typeof value !== 'undefined');
+    if( is_array(value) && value.length === 0 )
+        return false;
+    else
+        return (value !== '' && value !== null && typeof value !== 'undefined');
 }
 
 /**
