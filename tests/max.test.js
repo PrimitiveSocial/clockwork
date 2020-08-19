@@ -19,8 +19,12 @@ test('fails with string and invalid conditions', () => {
     expect(max('foo-bar', 3)).toBe(false);
 });
 
-test('fails with array', () => {
-    expect(max([1, 2], 5)).toBe(false);
+test('passes with array', () => {
+    expect(max([1, 2, 3], 5)).toBe(true);
+});
+
+test('fails with array and valid conditions', () => {
+    expect(max([1, 2, 3], 2)).toBe(false);
 });
 
 test('fails with object', () => {
