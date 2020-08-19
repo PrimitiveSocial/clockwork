@@ -317,7 +317,7 @@ export function matches_regex(value, expression) {
  * @returns {boolean}
  */
 export function max(value, arg) {
-    if(!value || !is_array(value)) {
+    if(!value && !is_array(value)) {
         return false;
     }
 
@@ -336,7 +336,7 @@ export function max(value, arg) {
  * @returns {boolean}
  */
 export function min(value, arg) {
-    if(!value || !is_array(value)) {
+    if(!value && !is_array(value)) {
         return false;
     }
 
