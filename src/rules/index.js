@@ -317,11 +317,11 @@ export function matches_regex(value, expression) {
  * @returns {boolean}
  */
 export function max(value, arg) {
-    if(!value || is_array(value) || typeof value === 'object') {
+    if(!value || !is_array(value)) {
         return false;
     }
 
-    value = typeof value === "string" ? value.length : value;
+    value = (typeof value === "string" || is_array(value)) ? value.length : value;
     return parseFloat(value) <= arg;
 }
 
@@ -336,11 +336,11 @@ export function max(value, arg) {
  * @returns {boolean}
  */
 export function min(value, arg) {
-    if(!value || is_array(value) || typeof value === 'object') {
+    if(!value || !is_array(value)) {
         return false;
     }
 
-    value = typeof value === "string" ? value.length : value;
+    value = (typeof value === "string" || is_array(value)) ? value.length : value;
 
     return parseFloat(value) >= arg;
 }
