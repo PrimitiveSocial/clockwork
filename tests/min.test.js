@@ -19,8 +19,12 @@ test('fails with string and invalid conditions', () => {
     expect(min('foo-bar', 50)).toBe(false);
 });
 
-test('fails with array', () => {
-    expect(min([1, 2], 5)).toBe(false);
+test('passes with array', () => {
+    expect(min([1, 2, 3], 2)).toBe(true);
+});
+
+test('fails with array and valid conditions', () => {
+    expect(min([1, 2, 3], 5)).toBe(false);
 });
 
 test('fails with object', () => {
