@@ -1,7 +1,7 @@
 {
   "name": "@primitivesocial/clockwork",
-  "version": "1.0.7",
-  "description": "Javascript validation utilities with support for VueJs",
+  "version": "1.0.8",
+  "description": "Javascript validation utilities with a wrapper for Vue component data validation",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
