@@ -1,6 +1,6 @@
 {
   "name": "@primitivesocial/clockwork",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Javascript validation utilities with a wrapper for Vue component data validation",
   "main": "dist/index.js",
   "scripts": {
