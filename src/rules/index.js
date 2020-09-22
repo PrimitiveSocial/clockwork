@@ -386,8 +386,10 @@ export function numeric(value) {
 export function required(value)  {
     if( is_array(value) && value.length === 0 )
         return false;
+    else if (is_string(value))
+        return value.trim() !== '';
     else
-        return (value !== '' && value !== null && typeof value !== 'undefined');
+        return value !== null && typeof value !== 'undefined';
 }
 
 /**
