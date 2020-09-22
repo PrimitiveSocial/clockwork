@@ -9,6 +9,10 @@ test('fails with empty string', () => {
     expect(required('')).toBe(false);
 });
 
+test('fails with spaces', () => {
+    expect(required('   ')).toBe(false);
+});
+
 test('fails with empty array', () => {
     expect(required([])).toBe(false);
 });
